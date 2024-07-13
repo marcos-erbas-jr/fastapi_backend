@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!--Acima foi importado a biblioteca axios do JavaScript por meio do CDN,
+     o Axios é utilizado para a comunicação do frontend e backend em
+     aplicações web-->
+
+    <script src="index.js"></script>
+    <title>AppAnimal</title>
+
+</head>
+<body>
+    <h1 class="display-1" style="text-align: center;">App Animal</h1> <!-- Uso de
+    Bootstrap-->
+    <h1 class="display-6" style="text-align: center;">Aplicativo para cadastro de Animais</h1> <!-- Uso
+    de Bootstrap-->
+    <br>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <!--FORMULÁRIO DE CADASTRO DE ANIMAIS-->
+                <h3>Novo Animal</h3>
+                <!--No ato do submit irá ser chamado a função manipularFormulario()-->
+                <form id="form-animal" onsubmit="manipularFormulario()"> <!--Formulario do bootstrap -->
+                  <div class="mb-3">
+                    <label class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="animalNome">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Cor</label>
+                    <input type="text" class="form-control" id="animalCor">
+                  </div>
+                <div class="mb-3">
+                    <label class="form-label">Idade</label>
+                    <input type="number" class="form-control"
+                           id="animalIdade" min="0" step="1">
+                </div>
+                <label class="form-label">Sexo do animal</label>
+                <select class="form-select" aria-label="Default select example"
+                        id="animalSexo">
+                  <option value="M">Masculino</option>
+                  <option value="F">Feminino</option>
+                </select>
+                  <br>
+                  <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+                <br>
+
+                <!--TABELA DE ANIMAIS-->
+
+                <h3>Animais Cadastrados</h3>
+                <table class="table"> <!-- Tabela do Bootstrap-->
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Nome</th>
+                      <th scope="col">Cor</th>
+                      <th scope="col">Idade</th>
+                      <th scope="col">Sexo</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tabelaAnimal"> <!--O tbody está sendo manupulado pelo
+                  index.js para preencher a tabela de forma dinâmica com os dados do
+                  backend-->
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
