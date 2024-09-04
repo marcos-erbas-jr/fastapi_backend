@@ -1,9 +1,0 @@
-Pasta config será usada para dar start no banco de dados, ele
-irá dizer quando sgbd será usado, as configurações de conexões e
-como elas serão feitas
-
-Pasta models, terá as representações das tabelas do banco de dados
-ou seja, como elas vão aparecer na aplicação
-
-Já o repositorios, será quem irá se comunicar com o banco de dados e
-trazer os modelos criados
